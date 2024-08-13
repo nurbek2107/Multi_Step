@@ -1,8 +1,9 @@
-body{
+body {
     background-color: aliceblue;
     font-family: 'Ubuntu';
 }
-.container{
+
+.container {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 15px;
@@ -12,17 +13,20 @@ body{
     align-items: center;
 
 }
-a{
+
+a {
     text-decoration: none;
 }
-.box{
-    /* width: 940px; */
-    /* height: 600px; */
+
+.box {
+    display: flex;
+    justify-content: space-between;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.092);
 }
-.circle{
+
+.circle {
     width: 274px;
     height: 568px;
     background-color: #483EFF;
@@ -30,24 +34,25 @@ a{
     margin: 16px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-
-    img{
+    img {
         border-radius: 10px;
         width: 274px;
         height: 293px;
     }
 }
-.page_link{
-    padding-left:32px;
+
+.page_link {
+    padding-left: 32px;
     padding-top: 40px;
     display: flex;
     flex-direction: column;
     gap: 16px;
-    a{
+
+    a {
         display: flex;
         align-items: center;
-        .num{
+
+        .num {
             border-radius: 50em;
             transition: all .5s ease;
             border: 2px solid #fff;
@@ -60,36 +65,281 @@ a{
             font-family: 'Ubuntu-700';
         }
 
-        .text{
+        .text {
             margin-left: 10px;
             font-size: 12px;
             font-weight: 500;
             line-height: 2px;
             color: #ABBCFF;
-            .text2{
+
+            .text2 {
                 font-size: 14px;
                 font-weight: 500;
                 line-height: 5px;
                 font-family: 'Ubuntu-700';
-                color: #fff;    
+                color: #fff;
             }
         }
-        
+
     }
-    a:hover{
-        .num{
+
+    a:hover {
+        .num {
             border: 2px solid #ffffff00;
             background-color: #BEE2FD;
             color: #022959;
 
         }
 
-        .text{
+        .text {
             color: #ABBCFF;
-            .text2{
-                color: #fff;    
+
+            .text2 {
+                color: #fff;
             }
         }
-        
+
     }
+}
+
+.personal_info {
+    padding-left: 100px;
+    padding-top: 46px;
+    padding-right: 100px;
+    font-weight: 700;
+    line-height: 28px;
+}
+
+.title_text {
+    line-height: 12px;
+}
+
+.title {
+    color: #022959;
+    font-size: 32px;
+    font-family: 'Ubuntu-700';
+}
+
+.text3 {
+    color: #7D7D7D;
+    font-size: 16px;
+    font-family: 'Ubuntu';
+    font-weight: 400;
+    line-height: 20px;
+}
+
+/* input */
+.main{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.input-group {
+    position: relative;
+    margin: 10px;
+}
+input{
+    color: #022959;
+    font-family: 'Ubuntu';
+    font-weight: 400;
+}
+.input {
+    width: 93%;
+    border: solid 1.5px #02295986;
+    border-radius: 4px;
+    background: none;
+    padding: 1.2rem;
+    font-size: 20px;
+    color: #022959;
+    transition: border 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.user-label {
+    position: absolute;
+    left: 15px;
+    top: 0px;
+    color: #022959ae;
+    pointer-events: none;
+    transform: translateY(1rem);
+    transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input:focus,
+input:valid {
+    outline: none;
+    border: 1.5px solid #022959;
+}
+
+.input:focus~label,
+input:valid~label {
+    transform: translateY(-50%) scale(0.8);
+    background-color: #ffffff;
+    padding: 0 .2em;
+    color: #022959;
+    font-size: 20px;
+
+}
+.button_group{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 81px;
+
+}
+.button_back {
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif; /* Ensure fallback font */
+    font-weight: 700;
+    line-height: 20px;
+    cursor: pointer;
+    border: none;
+    color: #7D7D7D;
+    background-color: transparent;
+    transition: color 1s ease, border-bottom 1s ease; /* Shorter transition for smooth effect */
+    padding: 10px 0; /* Add some vertical padding for better click area */
+    text-align: center; /* Center align text for better appearance */
+}
+
+
+.button_back:hover {
+    color: #022959;
+    /* border-bottom: 2px solid #022959; */
+}
+
+.button {
+    width: 123px;
+    padding: 15px 20px;
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    position: relative;
+    color: #f0f0f0;
+    z-index: 1;
+    cursor: pointer;
+  }
+  
+  .button::after,
+  .button::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -99999;
+    transition: all .4s;
+  }
+  
+  .button::before {
+    transform: translate(0%, 0%);
+    width: 100%;
+    height: 100%;
+    background: #022959;
+    border-radius: 10px;
+  }
+  
+  .button::after {
+    transform: translate(10px, 10px);
+    width: 35px;
+    height: 35px;
+    background: #3c506947;
+    backdrop-filter: blur(5px);
+    border-radius: 50px;
+  }
+  
+  .button:hover::before {
+    transform: translate(5%, 20%);
+    width: 110%;
+    height: 110%;
+  }
+  
+  .button:hover::after {
+    border-radius: 10px;
+    transform: translate(0, 0);
+    width: 100%;
+    height: 100%;
+  }
+  
+  .button:active::after {
+    transition: 0s;
+    transform: translate(0, 5%);
+  }
+
+
+
+@media (max-width: 850px) {
+    .container {
+        display: inline;
+        min-height: 0vh;
+        padding: 0px;
+    }
+    .box {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        background-color: aliceblue;
+        box-shadow: none;
+
+    }
+
+    .personal_info{
+        height: 52cap;
+        padding: 0px;
+        position: relative;
+        width: 100%;
+    }
+
+        .main {
+            padding: 30px;
+            z-index: 11;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.092);
+            background: #fff;
+            margin-top: 0; /* Adjust margin if needed */
+            border-radius: 8px;
+            position: absolute;
+            top: -45px; /* Move to the top of the parent */
+            left: 10%;
+            right: 10%;
+            
+        }
+    .circle {
+        width: 100%;
+        height: 156px;
+        margin: 0px;
+        border-radius: 0;
+        a{
+            z-index: 10;
+        }
+        img{
+            position: absolute;
+            top: 0;
+            z-index: 1;
+            width: 100%;
+            height: 172px;
+            padding: 0px;
+            border-radius: 0;
+        }
+    }
+    
+    .page_link {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .text{
+        display: none;
+    }
+    .button_container {
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        right: 0;
+        padding: 20px 15px; 
+        background-color: #FFFFFF; 
+        box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center; 
+        box-sizing: border-box;
+    }
+    .button_group{
+    margin-top: 0px;
+
+    }
+    
 }
