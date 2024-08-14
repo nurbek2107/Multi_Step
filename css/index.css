@@ -203,7 +203,10 @@ a {
   .cards_container1{
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 10px;
+    .span{
+        color: #022959;
+    }
   }
   
   .card-group {
@@ -223,7 +226,7 @@ a {
   .card {
     display: flex;
     flex-direction: column;
-    line-height: 0;
+    /* line-height: 0; */
     gap: 7px;
   }
   
@@ -487,7 +490,7 @@ input:valid~label {
         display: flex;
         flex-direction: row;
         align-items: center;
-        line-height: 0px;
+        /* line-height: 0px; */
         gap: 7px;
         h1{
             color: #022959;
@@ -524,6 +527,58 @@ input:valid~label {
 .card-group1:hover{
     border: 2px solid #022959;
 }
+.card-group2{
+    transition: all .5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* flex-direction: column; */
+    padding: 16px;
+    padding-right: 30px;
+    padding-bottom: 30  px;
+    border-radius: 8px;
+    cursor: pointer;
+    gap: 39px;
+    /* border: 2px solid #9699AA; */
+    .card{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        /* line-height: 0px; */
+        gap: 7px;
+        h1{
+            color: #022959;
+            font-size: 16px;
+            font-family: "Ubuntu";
+            font-weight: bold;
+        }
+        .card_text{
+            display: flex;
+            flex-direction: column;
+            line-height: 0px;
+            gap: 7px;
+            h1{
+                color: #022959;
+                font-size: 16px;
+                font-family: "Ubuntu";
+                font-weight: bold;
+            }
+        }
+        p{
+            color: #9699AA;
+            font-size: 14px;
+            font-family: "Ubuntu";
+            font-weight: 400;
+        }
+        span{
+            color: #022959;
+            font-size: 12px;
+            font-family: "Ubuntu";
+            font-weight: 400;
+        }
+    }                   
+}
+
 .monthly_yearly{
     display: flex;
     align-items: center;
