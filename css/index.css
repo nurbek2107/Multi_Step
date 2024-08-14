@@ -124,9 +124,134 @@ a {
 
 
 
-
-
-
+/* From Uiverse.io by mrhyddenn */
+.check {
+    cursor: pointer;
+    position: relative;
+    margin: auto;
+    width: 18px;
+    height: 18px;
+    -webkit-tap-highlight-color: transparent;
+    transform: translate3d(0, 0, 0);
+  }
+  
+  .check:before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(34,50,84,0.03);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+  
+  .check svg {
+    position: relative;
+    z-index: 1;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #c8ccd4;
+    stroke-width: 1.5;
+    transform: translate3d(0, 0, 0);
+    transition: all 0.2s ease;
+  }
+  
+  .check svg path {
+    stroke-dasharray: 60;
+    stroke-dashoffset: 0;
+  }
+  
+  .check svg polyline {
+    stroke-dasharray: 22;
+    stroke-dashoffset: 66;
+  }
+  
+  .check:hover:before {
+    opacity: 1;
+  }
+  
+  .check:hover svg {
+    stroke: #022959;
+  }
+  
+  #cbx:checked + .check svg,
+  #cbf:checked + .check svg,
+  #cbc:checked + .check svg {
+    stroke: #022959;
+  }
+  
+  #cbx:checked + .check svg path,
+  #cbf:checked + .check svg path,
+  #cbc:checked + .check svg path {
+    stroke-dashoffset: 60;
+    transition: all 0.3s linear;
+  }
+  
+  #cbx:checked + .check svg polyline,
+  #cbf:checked + .check svg polyline,
+  #cbc:checked + .check svg polyline {
+    stroke-dashoffset: 42;
+    transition: all 0.2s linear;
+    transition-delay: 0.15s;
+  }
+  
+  /* Card container and card styling */
+  .cards_container1{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .card-group {
+    transition: all .5s ease;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    gap: 39px;
+    border: 2px solid #9699AA;
+    width: calc(50% - 16px); /* Adjust width for two columns layout */
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    line-height: 0;
+    gap: 7px;
+  }
+  
+  .card h1 {
+    color: #022959;
+    font-size: 16px;
+    font-family: "Ubuntu";
+    font-weight: bold;
+  }
+  
+  .card p {
+    color: #9699AA;
+    font-size: 14px;
+    font-family: "Ubuntu";
+    font-weight: 400;
+  }
+  
+  .card span {
+    color: #022959;
+    font-size: 12px;
+    font-family: "Ubuntu";
+    font-weight: 400;
+  }
+  
+  .card-group:hover {
+    border: 2px solid #022959;
+  }
+  
 
 
 
@@ -302,7 +427,8 @@ input:valid~label {
 .cards_container{
     display: flex;
     align-items: start;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    gap: 20px;
 }
 .card-group{
     transition: all .5s ease;
@@ -342,6 +468,60 @@ input:valid~label {
     }                   
 }
 .card-group:hover{
+    border: 2px solid #022959;
+}
+.card-group1{
+    transition: all .5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* flex-direction: column; */
+    padding: 16px;
+    padding-right: 30px;
+    padding-bottom: 30  px;
+    border-radius: 8px;
+    cursor: pointer;
+    gap: 39px;
+    border: 2px solid #9699AA;
+    .card{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        line-height: 0px;
+        gap: 7px;
+        h1{
+            color: #022959;
+            font-size: 16px;
+            font-family: "Ubuntu";
+            font-weight: bold;
+        }
+        .card_text{
+            display: flex;
+            flex-direction: column;
+            line-height: 0px;
+            gap: 7px;
+            h1{
+                color: #022959;
+                font-size: 16px;
+                font-family: "Ubuntu";
+                font-weight: bold;
+            }
+        }
+        p{
+            color: #9699AA;
+            font-size: 14px;
+            font-family: "Ubuntu";
+            font-weight: 400;
+        }
+        span{
+            color: #022959;
+            font-size: 12px;
+            font-family: "Ubuntu";
+            font-weight: 400;
+        }
+    }                   
+}
+.card-group1:hover{
     border: 2px solid #022959;
 }
 .monthly_yearly{
