@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./public/images/favicon-32x32.png" type="image/x-icon">
-    <title>Multi_Step</title>
-    <link rel="stylesheet" href="./css/fonts.css">
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="css/normilayz.css">
+    <link rel="shortcut icon" href="../public/images/favicon-32x32.png" type="image/x-icon">
+    <title>Select your plan</title>
+    <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/normilayz.css">
 </head>
 
 <body>
@@ -16,7 +16,7 @@
         <div class="box">
             <div class="circle">
                 <div class="page_link">
-                    <a href="#">
+                    <a href="../index.html">
                         <span class="num">
                             1
                         </span>
@@ -25,7 +25,7 @@
                             <p class="text2">YOUR INFO</p>
                         </span>
                     </a>
-                    <a href="./pages/page.html">
+                    <a href="#">
                         <span class="num">
                             2
                         </span>
@@ -54,40 +54,63 @@
                     </a>
                 </div>
                 <div class="img">
-                    <img src="public/images/img_bottom.png" alt="">
+                    <img src="../public/images/img_bottom.png" alt="">
                 </div>
             </div>
             <div class="personal_info">
                 
-                <form action="./pages/page.html" class="form">
+                <!-- <form action="" class="form"> -->
                     <div class="main" >
                 
                 <div class="title_text">
                     <h1 class="title">Personal info</h1>
                     <p class="text3">Please provide your name, email address, and phone number.</p>
                 </div>
-                    <div class="input-group">
-                        <input required="" type="text" name="text" autocomplete="off" class="input">
-                        <label class="user-label">First Name</label>
-                    </div>
-                    <div class="input-group">
-                        <input required="" type="text" name="text" autocomplete="off" class="input">
-                        <label class="user-label">Email Address</label>
-                    </div>
-                    <div class="input-group">
-                        <input required="" type="text" name="text" autocomplete="off" class="input">
-                        <label class="user-label">Phone Number</label>
+                <div class="cards_container">
+                    <div class="card-group">
+                        <img src="../public/images/Group 11.png" alt="">
+                        <div class="card">
+                        <h1>Arcade</h1>
+                        <p>$90/yr</p>
+                        <span>2 months free</span>
                     </div>
                     </div>
-                    <div class="button_container">
-                    <div class="button_group">
-                    <button class="button_back"></button>
-                    <a href=""><button class="button"> Next Step
-                    </button></a>
+                    <div class="card-group">
+                        <img src="../public/images/Group 12.png" alt="">
+                        <div class="card">
+                        <h1>Arcade</h1>
+                        <p>$90/yr</p>
+                        <span>2 months free</span>
                     </div>
                 </div>
-            
-                </form>
+                <div class="card-group">
+                    <img src="../public/images/Group 13.png" alt="">
+                    <div class="card">
+                    <h1>Arcade</h1>
+                    <p>$90/yr</p>
+                    <span>2 months free</span>
+                </div>
+                </div>
+                </div>
+                
+                <div class="monthly_yearly">
+                    <p class="monthly">Monthly</p>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                    <p class="yearly">Yearly</p>
+                </div>
+                
+            </div>
+            <div class="button_container">
+                <div class="button_group">
+                <a href="../index.html"><p class="button_back">Go Back</p></a>
+                <a href="#"><button class="button"> Next Step
+                </button></a>
+                </div>
+            </div>
+                <!-- </form> -->
             </div>
             </div>
         </div>
