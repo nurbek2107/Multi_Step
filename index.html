@@ -1,97 +1,386 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <title>Form</title>
+  </head>
+  <body>
+    <main>
+      <!--=====  background header image nav =====-->
+      <nav class="nav">
+        <!--===== navigation buttons =====-->
+        <div class="nav__btn btn">
+          <button class="nav__button blue-background" id="personal-info">
+            1
+          </button>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./public/images/favicon-32x32.png" type="image/x-icon">
-    <title>Multi_Step</title>
-    <link rel="stylesheet" href="./css/fonts.css">
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/normilayz.css">
-</head>
-
-<body>
-    <div class="container">
-        <div class="box">
-            <div class="circle">
-                <div class="page_link">
-                    <a href="#">
-                        <span class="num">
-                            1
-                        </span>
-                        <span class="text">
-                            <p>STEP 1</p>
-                            <p class="text2">YOUR INFO</p>
-                        </span>
-                    </a>
-                    <a href="./page.html">
-                        <span class="num">
-                            2
-                        </span>
-                        <span class="text">
-                            <p>STEP 2</p>
-                            <p class="text2">YOUR INFO</p>
-                        </span>
-                    </a>
-                    <a href="./page2.html">
-                        <span class="num">
-                            3
-                        </span>
-                        <span class="text">
-                            <p>STEP 3</p>
-                            <p class="text2">YOUR INFO</p>
-                        </span>
-                    </a>
-                    <a href="./page3.html">
-                        <span class="num">
-                            4
-                        </span>
-                        <span class="text">
-                            <p>STEP 4</p>
-                            <p class="text2">YOUR INFO</p>
-                        </span>
-                    </a>
-                </div>
-                <div class="img">
-                    <img src="public/images/img_bottom.png" alt="">
-                </div>
-            </div>
-            <div class="personal_info">
-                
-                <form action="./pages/page.html" class="form">
-                    <div class="main" >
-                
-                <div class="title_text">
-                    <h1 class="title">Personal info</h1>
-                    <p class="text3">Please provide your name, email address, and phone number.</p>
-                </div>
-                    <div class="input-group">
-                        <input required="" type="text" name="text" autocomplete="off" class="input">
-                        <label class="user-label">First Name</label>
-                    </div>
-                    <div class="input-group">
-                        <input required="" type="text" name="text" autocomplete="off" class="input">
-                        <label class="user-label">Email Address</label>
-                    </div>
-                    <div class="input-group">
-                        <input required="" type="text" name="text" autocomplete="off" class="input">
-                        <label class="user-label">Phone Number</label>
-                    </div>
-                    </div>
-                    <div class="button_container">
-                    <div class="button_group">
-                    <button class="button_back"></button>
-                    <a href=""><button class="button"> Next Step
-                    </button></a>
-                    </div>
-                </div>
-            
-                </form>
-            </div>
-            </div>
+          <div class="nav_detail">
+            <span class="pastel_blue">Step 1</span>
+            <span class="white">Your Info</span>
+          </div>
         </div>
-</body>
-<script src="./dist/app.js"></script>
 
+        <div class="nav__btn">
+          <button class="nav__button" id="select-plans">2</button>
+          <div class="nav_detail">
+            <span class="pastel_blue">Step 2</span>
+            <span class="white">Select plan</span>
+          </div>
+        </div>
+
+        <div class="nav__btn">
+          <button class="nav__button" id="add-ons">3</button>
+
+          <div class="nav_detail">
+            <span class="pastel_blue">Step 3</span>
+            <span class="white">Add-ons</span>
+          </div>
+        </div>
+
+        <div class="nav__btn">
+          <button class="nav__button" id="thanks">4</button>
+
+          <div class="nav_detail">
+            <span class="pastel_blue">Step 4</span>
+            <span class="white">Summary</span>
+          </div>
+        </div>
+      </nav>
+
+      <div class="all_container">
+        <!--===== personal_info form container =========  -->
+        <div class="container personal_info" id="personal__info">
+          <div class="form">
+            <form class="form_container">
+              <h3 class="form_heading heading-color">Personal info</h3>
+
+              <p class="form_subtitle">
+                Please provide your name, email address and phone number.
+              </p>
+
+              <div class="info">
+                <div class="name_info inputs">
+                  <div class="error">
+                    <label for="name">Name</label>
+                    <span class="error_text">Enter your name</span>
+                  </div>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="e.g. Stephen King"
+                    class="input"
+                  />
+                </div>
+
+                <div class="email_info inputs">
+                  <div class="error">
+                    <label for="name">Email Address</label>
+                    <span class="error_text">Enter your email</span>
+                  </div>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="e.g. sirp2804@gmail.com"
+                    class="input"
+                  />
+                </div>
+
+                <div class="phone_number inputs">
+                  <div class="error">
+                    <label for="contact">Phone Number</label>
+                    <span class="error_text">Enter your phone number</span>
+                  </div>
+                  <input
+                    type="text"
+                    name="contact"
+                    id="contact"
+                    placeholder="e.g. +234 8146 799 964"
+                    class="input"
+                  />
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!---==== add ons plans container  ======--->
+        <div class="container plans none" id="add__ons">
+          <div class="form">
+            <form class="form_container">
+              <h3 class="form_heading heading-color">Select your plan</h3>
+
+              <p class="form_subtitle">
+                You have the option of monthly or yearly billing.
+              </p>
+
+              <div class="billings">
+                <div class="monthly_billing bills">
+                  <div class="plan">
+                    <img
+                      src="./assets/images/icon-arcade.svg"
+                      alt
+                      class="arcade"
+                    />
+
+                    <div class="pricing">
+                      <p class="text">Arcade</p>
+                      <span class="price">$9/mo</span>
+                    </div>
+                  </div>
+                  <div class="plan">
+                    <img
+                      src="./assets/images/icon-advanced.svg"
+                      alt
+                      class="advanced"
+                    />
+
+                    <div class="pricing">
+                      <p class="text">Advanced</p>
+                      <span class="price">$12/mo</span>
+                    </div>
+                  </div>
+                  <div class="plan">
+                    <img src="./assets/images/icon-pro.svg" alt class="pro" />
+
+                    <div class="pricing">
+                      <p class="text">Pro</p>
+                      <span class="price">$15/mo</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="yearly_billing bills none">
+                  <div class="plan">
+                    <img
+                      src="./assets/images/icon-arcade.svg"
+                      alt
+                      class="arcade"
+                    />
+
+                    <div class="pricing">
+                      <p class="text">Arcade</p>
+                      <span class="price">$90/year</span>
+                      <span class="trial">2 months free</span>
+                    </div>
+                  </div>
+                  <div class="plan">
+                    <img
+                      src="./assets/images/icon-advanced.svg"
+                      alt
+                      class="advanced"
+                    />
+
+                    <div class="pricing">
+                      <p class="text">Advanced</p>
+                      <span class="price">$120/yr</span>
+                      <span class="trial">2 months free</span>
+                    </div>
+                  </div>
+                  <div class="plan">
+                    <img src="./assets/images/icon-pro.svg" alt class="pro" />
+
+                    <div class="pricing">
+                      <p class="text">Pro</p>
+                      <span class="price">$150/yr</span>
+                      <span class="trial">2 months free</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="time">
+                <p class="monthly heading-color">Monthly</p>
+
+                <input
+                  type="checkbox"
+                  name="toggle"
+                  id="switch"
+                  class="checkbox"
+                />
+                <label for="switch" class="toggle"></label>
+
+                <p class="yearly sub-color">Yearly</p>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!--======= Finishing up container ===========-->
+        <div class="container form finishing_container none" id="finishing__up">
+          <div class="final_details">
+            <h3 class="form_heading heading-color">Finishing up</h3>
+
+            <p class="form_subtitle">
+              Double check everything looks OK before confirming.
+            </p>
+
+            <div class="picked_monthly picked">
+              <div class="change">
+                <div class="change_details">
+                  <p class="heading-color">Arcade(Monthly)</p>
+                  <button class="change_picked">Change</button>
+                </div>
+                <span class="heading-color bold">$9/mo</span>
+              </div>
+
+              <div class="services">
+                <div class="online_service service">
+                  <p class="sub-color">Online service</p>
+                  <span class="heading-color">+$1/mo</span>
+                </div>
+
+                <div class="local_storage">
+                  <div class="storage service">
+                    <p class="sub-color">Local storage</p>
+                    <span class="heading-color">+$2/mo</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="total">
+                <p class="sub-color">Total(per month)</p>
+                <span class="blue">+$12/mo</span>
+              </div>
+            </div>
+
+            <div class="picked_yearly picked none">
+              <div class="change">
+                <div class="change_details">
+                  <p class="heading-color">Arcade(Yearly)</p>
+                  <button class="change_picked">Change</button>
+                </div>
+                <span class="heading-color bold">$90/yr</span>
+              </div>
+
+              <div class="services">
+                <div class="online_service service">
+                  <p class="sub-color">Online service</p>
+                  <span class="heading-color">+$10/yr</span>
+                </div>
+
+                <div class="local_storage">
+                  <div class="storage service">
+                    <p class="sub-color">Local storage</p>
+                    <span class="heading-color">+$20/yr</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="total">
+                <p class="sub-color">Total(per month)</p>
+                <span class="blue">+$120/yr</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pick_addons container">
+            <h2 class="form_heading heading-color">Pick add-ons</h2>
+            <p class="form_subtitle">
+              Add-ons help enhance your gaming experience.
+            </p>
+
+            <div class="checkbox_container">
+              <div class="add_ons">
+                <input type="checkbox" name="dlc" id="dlc" class="dlc" />
+                <div class="addon_info">
+                  <p class="heading-color pc_heading">Online Service</p>
+                  <p class="sub-color pc_sub">Access to multiplayer games</p>
+                </div>
+                <p class="price_pc">+$1/mo</p>
+              </div>
+              <div class="add_ons">
+                <input type="checkbox" name="dlc" id="dlc" class="dlc" />
+                <div class="fix">
+                  <p class="heading-color pc_heading">Larger storage</p>
+                  <p class="sub-color pc_sub">Extra 1TB of cloud save</p>
+                </div>
+                <p class="price_pc">+$2/mo</p>
+              </div>
+              <div class="add_ons">
+                <input type="checkbox" name="dlc" id="dlc" class="dlc" />
+                <div class="addon_info">
+                  <p class="heading-color pc_heading">Customizable profile</p>
+                  <p class="sub-color pc_sub">Custom theme on your profile</p>
+                </div>
+                <p class="price_pc">+$2/mo</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==== thank you page ======= -->
+        <div class="thanks container none" id="thanks__page">
+          <div class="arigato">
+            <div class="img">
+              <img src="./assets/images/icon-thank-you.svg" alt />
+            </div>
+            <h3 class="heading-color">Thank you!</h3>
+            <div class="note sub-color">
+              Thanks for confirming your subscription! We hope you have fun
+              using our platform. If you ever need support, please feel free to
+              email us at support@loremgaming.com.
+            </div>
+          </div>
+
+          <div class="confirm_page container final_details">
+            <p class=" form_heading heading-color heading_summary">Finishing up</p>
+            <p class="form_subtitle heading_sub">Double-check everything looks OK before confirming.</p>
+
+            <div class="confirm picked">
+              <div class="pc_arcade change">
+                <div class="change_details">
+                  <p class="heading-color">Arcade(Monthly)</p>
+                  <button class="change_picked">Change</button>
+                </div>
+                <span class="heading-color bold">$9/mo</span>
+              </div>
+
+              <div class="services">
+                <div class="online_service service">
+                  <p class="sub-color">Online service</p>
+                  <span class="heading-color">+$1/mo</span>
+                </div>
+
+                <div class="local_storage">
+                  <div class="storage service">
+                    <p class="sub-color">Local storage</p>
+                    <span class="heading-color">+$2/mo</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="total">
+                <p class="sub-color">Total(per month)</p>
+                <span class="blue">+$12/mo</span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--==== next step and previous button ========-->
+      <div class="page_navigation">
+        <div class="previous_btn">
+          <button class="prev" id="prev">Go back</button>
+        </div>
+        <div class="next_step">
+          <button class="next">Next Step</button>
+        </div>
+
+        <div class="submit_btn">
+          <button class="submit">Confirm</button>
+        </div>
+      </div>
+    </main>
+    <script src="./dist/app.js"></script>
+  </body>
 </html>
